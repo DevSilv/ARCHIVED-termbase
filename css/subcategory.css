@@ -1,0 +1,47 @@
+.subcategory {
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+
+    /* display: grid; */
+    /* I do not know how "minmax(0, auto)" works,
+    but it seems to work as expected... */
+    /* grid-template-columns: min-content minmax(0, auto); */
+    /* grid-template-rows: 1fr auto; */
+    /* align-items: baseline; */
+}
+
+.subcategory__name {
+    /* Get rid of the default margin for level 3 heading */
+    margin: 0;
+    border-bottom: 0.25em solid lightgrey;
+}
+
+.subcategory__action-list {
+    display: none;
+}
+
+.subcategory__header:hover .subcategory__action-list {
+    padding-top: 0.5em;
+
+    /* TODO: I did not specify any "initial" value,
+    but it seems to behave properly... */
+    display: initial;
+    position: absolute;
+}
+
+.subcategory__header:hover .subcategory__action {
+    opacity: 0.7;
+}
+
+.subcategory__action {
+    /* The property "font-size" applies only because
+    currently all the actions buttons contain
+    only characters (i.e. no images). */
+    font-size: 0.8em;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+}
+
+.subcategory__header:hover .subcategory__action:hover {
+    opacity: 1.0;
+}

@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif;
+    /* Set margin so that the vertical bar does not interfere with document's content */
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+ul {
+    /* Get rid of default settings for unordered lists */
+
+    list-style: none;
+
+    padding-left: 0;
+}
+
+button {
+    /* Get rid of the default styling for buttons */
+
+    background-image: linear-gradient(rgb(240, 240, 240), rgb(209, 209, 209));
+    cursor: pointer;
+    border-radius: 0.25em;
+
+    border: 1px solid grey;
+    font-size: inherit;
+    padding: 0;
+}
+
+button:active {
+    background-image: linear-gradient(rgb(209, 209, 209), rgb(240, 240, 240));
+}
+
+select {
+    /* Get rid of the default styling for select elements */
+
+    border-radius: 0.25em;
+
+    border: 1px solid grey;
+}

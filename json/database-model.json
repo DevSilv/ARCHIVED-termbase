@@ -1,0 +1,498 @@
+{
+    "entities": [
+        "document",
+        "sources",
+        "terms",
+        "categories",
+        "subcategories",
+        "potential-reviewer",
+        "some-security-and-safety-practices-and-considerations",
+        "some-common-problems"
+    ],
+    "relations": {
+        "document": {
+            "id": {
+                "type": "integer-number",
+                "is-changeable": false,
+                "is-unique": true,
+                "is-foreign-key": false,
+                "is-primary-key": true,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "name": {
+                "type": "character-string",
+                "is-changeable": false,
+                "is-unique": true,
+                "is-foreign-key": false,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "value": {
+                "type": "character-string",
+                "is-changeable": true,
+                "is-unique": false,
+                "is-foreign-key": false,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            }
+        },
+        "modifications": {
+            "id": {
+                "type": "integer-number",
+                "is-changeable": false,
+                "is-unique": true,
+                "is-foreign-key": false,
+                "is-primary-key": true,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "date": {
+                "type": "date",
+                "is-changeable": false,
+                "is-unique": false,
+                "is-foreign-key": false,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            }
+        },
+        "potential-reviewers": {
+            "id": {
+                "type": "integer-number",
+                "is-changeable": false,
+                "is-unique": true,
+                "is-foreign-key": false,
+                "is-primary-key": true,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "name": {
+                "type": "character-string",
+                "is-changeable": true,
+                "is-unique": false,
+                "is-foreign-key": false,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "contact": {
+                "type": "character-string",
+                "is-changeable": true,
+                "is-unique": false,
+                "is-foreign-key": false,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            }
+        },
+        "reviews": {
+            "id": {
+                "type": "integer-number",
+                "is-changeable": false,
+                "is-unique": true,
+                "is-foreign-key": false,
+                "is-primary-key": true,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "potential-reviewer-id": {
+                "type": "integer-number",
+                "is-changeable": false,
+                "is-unique": false,
+                "is-foreign-key": true,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "review-date": {
+                "type": "date",
+                "is-changeable": false,
+                "is-unique": false,
+                "is-foreign-key": false,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "reviewer-remarks": {
+                "type": "character-string",
+                "is-changeable": true,
+                "is-unique": false,
+                "is-foreign-key": false,
+                "is-primary-key": false,
+                "is-value-required": false,
+                "has-default-value": false,
+                "default-value": null
+            }
+        },
+        "sources": {
+            "id": {
+                "type": "integer-number",
+                "is-changeable": false,
+                "is-unique": true,
+                "is-foreign-key": false,
+                "is-primary-key": true,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "name": {
+                "type": "character-string",
+                "is-changeable": true,
+                "is-unique": false,
+                "is-foreign-key": false,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "source-type-id": {
+                "type": "integer-number",
+                "is-changeable": true,
+                "is-unique": false,
+                "is-foreign-key": false,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            }
+        },
+        "source-types": {
+            "id": {
+                "type": "integer-number",
+                "is-changeable": false,
+                "is-unique": true,
+                "is-foreign-key": false,
+                "is-primary-key": true,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "name": {
+                "type": "character-string",
+                "is-changeable": true,
+                "is-unique": true,
+                "is-foreign-key": false,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            }
+        },
+        "sources-to-discover": {
+            "id": {
+                "type": "integer-number",
+                "is-changeable": false,
+                "is-unique": true,
+                "is-foreign-key": false,
+                "is-primary-key": true,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "name": {
+                "type": "character-string",
+                "is-changeable": true,
+                "is-unique": true,
+                "is-foreign-key": false,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            }
+        },
+        "terms": {
+            "id": {
+                "type": "integer-number",
+                "is-changeable": false,
+                "is-unique": true,
+                "is-foreign-key": false,
+                "is-primary-key": true,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "name": {
+                "type": "character-string",
+                "is-changeable": true,
+                "is-unique": true,
+                "is-foreign-key": false,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "notes": {
+                "type": "character-string",
+                "is-changeable": true,
+                "is-unique": false,
+                "is-foreign-key": false,
+                "is-primary-key": false,
+                "is-value-required": false,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "experience-type-id": {
+                "type": "integer-number",
+                "is-changeable": true,
+                "is-unique": false,
+                "is-foreign-key": true,
+                "is-primary-key": false,
+                "is-value-required": false,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "is-to-learn": {
+                "type": "boolean",
+                "is-changeable": true,
+                "is-unique": false,
+                "is-foreign-key": false,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": true,
+                "default-value": "false"
+            },
+            "is-project-done": {
+                "type": "boolean",
+                "is-changeable": true,
+                "is-unique": false,
+                "is-foreign-key": false,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": true,
+                "default-value": "false"
+            }
+        },
+        "categories": {
+            "id": {
+                "type": "integer-number",
+                "is-changeable": false,
+                "is-unique": true,
+                "is-foreign-key": false,
+                "is-primary-key": true,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "name": {
+                "type": "character-string",
+                "is-changeable": true,
+                "is-unique": true,
+                "is-foreign-key": false,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            }
+        },
+        "subcategories": {
+            "id": {
+                "type": "integer-number",
+                "is-changeable": false,
+                "is-unique": true,
+                "is-foreign-key": false,
+                "is-primary-key": true,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "name": {
+                "type": "character-string",
+                "is-changeable": true,
+                "is-unique": false,
+                "is-foreign-key": false,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "category-id": {
+                "type": "integer-number",
+                "is-changeable": true,
+                "is-unique": false,
+                "is-foreign-key": true,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            }
+        },
+        "terms-categories": {
+            "term-id": {
+                "type": "integer-number",
+                "is-changeable": true,
+                "is-unique": false,
+                "is-foreign-key": true,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "category-id": {
+                "type": "integer-number",
+                "is-changeable": true,
+                "is-unique": false,
+                "is-foreign-key": true,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            }
+        },
+        "terms-subcategories": {
+            "term-id": {
+                "type": "integer-number",
+                "is-changeable": true,
+                "is-unique": false,
+                "is-foreign-key": true,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "subcategory-id": {
+                "type": "integer-number",
+                "is-changeable": true,
+                "is-unique": false,
+                "is-foreign-key": true,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            }
+        },
+        "terms-other-names": {
+            "id": {
+                "type": "integer-number",
+                "is-changeable": false,
+                "is-unique": true,
+                "is-foreign-key": false,
+                "is-primary-key": true,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "name": {
+                "type": "character-string",
+                "is-changeable": true,
+                "is-unique": false,
+                "is-foreign-key": false,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "term-id": {
+                "type": "integer-number",
+                "is-changeable": true,
+                "is-unique": false,
+                "is-foreign-key": true,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            }
+        },
+        "terms-sources": {
+            "term-id": {
+                "type": "integer-number",
+                "is-changeable": true,
+                "is-unique": false,
+                "is-foreign-key": true,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "source-id": {
+                "type": "integer-number",
+                "is-changeable": true,
+                "is-unique": false,
+                "is-foreign-key": true,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            }
+        },
+        "experience-types": {
+            "id": {
+                "type": "integer-number",
+                "is-changeable": false,
+                "is-unique": true,
+                "is-foreign-key": false,
+                "is-primary-key": true,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "name": {
+                "type": "character-string",
+                "is-changeable": true,
+                "is-unique": false,
+                "is-foreign-key": false,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            }
+        },
+        "some-security-and-safety-practices-and-considerations": {
+            "id": {
+                "type": "integer-number",
+                "is-changeable": false,
+                "is-unique": true,
+                "is-foreign-key": false,
+                "is-primary-key": true,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "content": {
+                "type": "character-string",
+                "is-changeable": true,
+                "is-unique": false,
+                "is-foreign-key": false,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            }
+        },
+        "some-common-problems": {
+            "id": {
+                "type": "integer-number",
+                "is-changeable": false,
+                "is-unique": true,
+                "is-foreign-key": false,
+                "is-primary-key": true,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            },
+            "content": {
+                "type": "character-string",
+                "is-changeable": true,
+                "is-unique": false,
+                "is-foreign-key": false,
+                "is-primary-key": false,
+                "is-value-required": true,
+                "has-default-value": false,
+                "default-value": null
+            }
+        }
+    }
+}

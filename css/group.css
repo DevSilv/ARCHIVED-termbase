@@ -1,0 +1,53 @@
+.group {
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+
+    display: grid;
+    /* I do not know how "minmax(0, auto)" works,
+    but it seems to work as expected... */
+    grid-template-columns: min-content minmax(0, auto);
+    grid-template-rows: 1fr auto;
+    align-items: baseline;
+}
+
+.group__name {
+    /* Get rid of the default margin for level 3 heading */
+    margin: 0;
+    /* In the following declarations, I concluded that it is
+    cleaner to declare the exact border value in one declaration
+    for all sides and later just remove it for specific sides,
+    instead of having the same value written in two declarations. */
+    border: 2px solid darkgrey;
+    border-top: none;
+    border-right: none;
+    padding: 0.25em;
+    padding-top: 0;
+    padding-right: 0;
+    border-bottom-left-radius: 0.25em;
+}
+
+.group__action-list {
+    display: none;
+}
+
+.group__header:hover .group__action-list {
+    padding-top: 0.5em;
+
+    /* TODO: I did not specify any "initial" value,
+    but it seems to behave properly... */
+    display: initial;
+    position: absolute;
+}
+
+.group__action {
+    /* The property "font-size" applies only because
+    currently all the actions buttons contain
+    only characters (i.e. no images). */
+    font-size: 0.8em;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+}
+
+.group__header:hover .group__action:hover {
+    opacity: 1.0;
+}

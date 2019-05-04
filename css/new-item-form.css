@@ -1,0 +1,94 @@
+.new-item-form {
+    background-color: rgb(236, 236, 236);
+    border-radius: 0.25em;
+
+    padding: 0.25em;
+    border: 1px solid grey;
+    /* I do not know fo sure whether there would be
+    more appropriate max-content or min-content below
+    because they seem to behave the same way in this
+    situation. */
+    max-width: max-content;
+
+    display: grid;
+    /* Grid columns width is approximately determined as:
+    minimum viewport width / 2 - some approximate width
+    for all additional left and right margins and paddings. */
+    grid-template-columns: repeat(2, calc(384px / 2 - 50px));
+    grid-row-gap: 0.25em;
+    grid-column-gap: 1em;
+    align-items: center;
+}
+
+.new-item-form-container--basic--right {
+    /* A hack for proper displaying the form
+    in its extended form. The value is chosen
+    "na oko" (with the settings more or less
+    default). */
+    height: 3em;
+
+    /* z-index: 1; */
+
+    grid-column: 2 / 3;
+    justify-self: end;
+}
+
+.new-item-form-container--full--right {
+    /* A hack for proper displaying the form
+    in its extended form. The value is chosen
+    "na oko" (with the settings more or less
+    default). */
+    height: 3em;
+
+    grid-column: 2 / 3;
+    justify-self: end;
+
+    z-index: 1;
+}
+
+.new-item-form--basic--right {
+    /* Do not remove this empty rule. Although currently the layout works as intended,
+    it is left for CSS stylesheet rules layout consistency. */
+}
+
+.new-item-form--full--right {
+    /* Do not remove this empty rule. Although currently the layout works as intended,
+    it is left for CSS stylesheet rules layout consistency. */
+}
+
+.new-item-form-container--basic--left {
+    /* Do not remove the following out-commented rules. Although currently the layout works as intended,
+    they are left for CSS stylesheet rules layout consistency. */
+    /* A hack for proper displaying of the form */
+    /* height: 2.75em; */
+    /* z-index: 1; */
+}
+
+.new-item-form-container--full--left {
+    z-index: 1;
+}
+
+.new-item-form--basic--left {
+    /* Do not remove this empty rule. Although currently the layout works as intended,
+    it is left for CSS stylesheet rules layout consistency. */
+}
+
+.new-item-form--full--left {
+    /* Do not remove this empty rule. Although currently the layout works as intended,
+    it is left for CSS stylesheet rules layout consistency. */
+}
+
+.new-item-form__field {
+    max-width: 150px;
+}
+
+.new-item-form__field--hidden {
+    display: none;
+}
+
+.new-item-form__field--aligned-left {
+    /* A hack for left-align of this particular inputs
+    because CSS grid, uknownly to me, causes text inputs
+    NOT TO shrink when aligned left explicitly. */
+    justify-self: left;
+}

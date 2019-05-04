@@ -1,0 +1,66 @@
+.document__header {
+    display: block;
+}
+
+@media screen and (min-width: 1024px) {
+    .document__header {
+        /* A hack (alongside with the value "25%" below instead of "1fr")
+        so that the header columns will not change its width when toggling
+        displaying the summary element, as long as there is plain text
+        displayed in the header columns. */
+        word-wrap: break-word;
+
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: repeat(3, auto);
+    }
+}
+
+.document__header__header-field {
+    border: 1px solid black;
+    padding: 0.2em;
+}
+
+.document__header__header-field h3 {
+    display: inline;
+}
+
+.document__title {
+    text-align: center;
+
+    /* Get rid of the border that is defined for all the fields in document's header */
+    border: none;
+
+    grid-column: 1 / 5;
+}
+
+.document__author__header,
+.document__modification-date-list__header,
+.document__potential-reviewer-list__header,
+.document__review-list__header {
+    cursor: pointer;
+}
+
+.document__action-list {
+    /* Get rid of the default margin for unordered lists */
+    margin: 0;
+    padding: 0.5em;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-items: left;
+    grid-column-gap: 0.5em;
+
+    grid-column: 1 / 5;
+}
+
+.document__action__button {
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.document__action:active {
+    background-image: linear-gradient(rgb(209, 209, 209), rgb(240, 240, 240));
+}

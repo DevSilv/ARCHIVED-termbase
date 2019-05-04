@@ -1,0 +1,30 @@
+{
+	"document": {
+		"title": "character-string",
+		"author": "character-string",
+		"modification-dates": ["character-string"],
+		"potential-reviewers": [{
+			"name": "character-string",
+			"contact": "character-string"
+		}],
+		"reviews": [{
+			"reviewer": "character-string",
+			"date": "character-string",
+			"remarks": "character-string"
+		}]
+	},
+	"categories": [{
+		"name": "character-string",
+		"subcategories": [{
+			"name": "character-string",
+			"terms": [{
+				"name": "character-string",
+				"other-names": ["character-string"],
+				"sources": ["character-string"],
+				"experience": "character-string",
+				"is-to-learn": "boolean",
+				"is-project-done": "boolean"
+			}]
+		}]
+	}]
+}

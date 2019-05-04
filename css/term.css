@@ -1,0 +1,155 @@
+.term-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.term {
+    border-radius: 0.25em;
+    background-color: rgb(240, 240, 240);
+
+    /* The magic constant "0.375" is from
+    assuming that 1em = 1rem = 16px,
+    therefore 0.375em = 6px (half-between
+    0.5em and 0.25em). */
+    margin-top: 0.375em;
+    margin-bottom: 0.375em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding: 0.25em;
+
+    /* The following declaration "position: relative"
+    is set for proper displaying the source list. */
+    position: relative;
+}
+
+.term--to-learn {
+    color: purple;
+}
+
+.term--project-done {
+    background-color: rgb(202, 202, 202);
+}
+
+/* Term's name */
+
+.term__name {
+    /* Get rid of the default margin for paragraphs */
+    margin: 0;
+}
+
+/* Term's sources */
+
+.term__source-list-container {
+    /* The same padding as term's name */
+    padding-top: 6px;
+    font-size: 0.8rem;
+
+    left: 0;
+    top: 100%;
+    display: none;
+    position: absolute;
+    z-index: 2;
+}
+
+.term__source-list {
+    background-color: rgb(236, 236, 236);
+    border-radius: 0.25em;
+    border: 1px solid grey;
+
+    max-width: 50vw;
+    max-height: 20vh;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+}
+
+@media screen and (min-width: 1024px) {
+    .term-source-list {
+        max-width: 30vw;
+    }
+}
+
+.term__source-list p {
+    margin: 0.25em;
+}
+
+.term__source-list li {
+    padding-bottom: 0.375em;
+    padding-top: 0.375em;
+    border-bottom: 1px solid black;
+}
+
+.term__source-list li:last-child {
+    border-bottom: none;
+}
+
+.term__action-list-and-property-list-container {
+    display: none;
+}
+
+.term:hover .term__action-list-and-property-list-container {
+    padding-bottom: 6px;
+    min-width: 100%;
+
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-end;
+}
+
+/* Term's properties */
+
+.term__property-list {
+    /* For some reason, setting the font size here
+    (instead of in the child elements) does not work
+    as expected. */
+    max-width: max-content;
+}
+
+.term__property {
+    background-color: rgb(236, 236, 236);
+    border-radius: 0.25em;
+    text-align: right;
+
+    line-height: 75%;
+    padding: 0.25em;
+    border: 1px solid grey;
+}
+
+.term__property__label {
+    margin-right: 0.5em;
+}
+
+.term__is-to-learn-property__label,
+.term__is-project-done-property__label {
+    font-size: 0.8em;
+
+    display: inline;
+}
+
+.term__experience-property__content,
+.term__is-to-learn-property__content,
+.term__is-project-done-property__content {
+    font-size: 0.8em;
+}
+
+/* Term's actions */
+
+.term__action-list {
+    font-size: 0.8em;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-self: end;
+}
+
+.term__action {
+    margin-left: 0.25em;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+}
