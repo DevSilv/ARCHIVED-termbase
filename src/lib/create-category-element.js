@@ -1,4 +1,8 @@
-function createCategoryElement(categoryContent, sources) {
+import createSubcategoryElement from "./create-subcategory-element.js";
+import createNewItemFormElement from "./create-new-item-form-element.js";
+import "../css/category.css";
+
+export default function createCategoryElement(categoryContent, sources) {
     // The parameter "categoryContent" is expected to be a native JavaScript object.
     // The function returns an HTML element.
 

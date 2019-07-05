@@ -1,4 +1,4 @@
-function isURI(value) {
+export default function isURI(value) {
     return true;
     // return /TODO: URI regex here/.test(value);
 }

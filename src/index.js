@@ -1,3 +1,8 @@
+import createMarkup from "./lib/create-markup.js";
+import loadContentFromFile from "./lib/load-content-from-file.js";
+import saveContentToFile from './lib/save-content-to-file.js';
+import "./css/index.css";
+
 document.addEventListener("DOMContentLoaded", function () {
     // Initial loading content from file with the default name
 

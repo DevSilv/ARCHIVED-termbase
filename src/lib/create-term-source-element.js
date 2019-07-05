@@ -1,4 +1,4 @@
-function createTermSourceElement(termSourceContent, isURI) {
+export default function createTermSourceElement(termSourceContent, isURI) {
     // The parameter "termSourceContent" is expected to be a native JavaScript object.
     // The function returns an HTML element.
 

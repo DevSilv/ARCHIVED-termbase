@@ -1,4 +1,8 @@
-function createMarkup(content) {
+import createCategoryElement from "./create-category-element.js";
+import createNewItemFormElement from "./create-new-item-form-element.js";
+import "../css/markup.css";
+
+export default function createMarkup(content) {
     // The parameter "content" is expected to be a native JavaScript object.
     // The function returns an HTML element.
 

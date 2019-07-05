@@ -1,4 +1,8 @@
-function createSubcategoryElement(subcategoryContent, sources) {
+import createGroupElement from "./create-group-element.js";
+import createNewItemFormElement from "./create-new-item-form-element.js";
+import "../css/subcategory.css";
+
+export default function createSubcategoryElement(subcategoryContent, sources) {
     // The parameter "subcategoryContent" is expected to be a native JavaScript object.
     // The function returns an HTML element.
 

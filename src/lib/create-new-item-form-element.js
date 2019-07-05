@@ -1,3 +1,5 @@
+import "../css/new-item-form.css";
+
 /*{
     "container": {
         "initial-css-classes": ["List of classes for item's for container element"],
@@ -19,7 +21,7 @@
     }]
 }*/
 
-function createNewItemFormElement(formContent, formSubmitFunction) {
+export default function createNewItemFormElement(formContent, formSubmitFunction) {
     const newItemFormContainerElement = document.createElement("DIV");
     newItemFormContainerElement.classList.add(formContent["container"]["basic-container-css-class"]);
 

@@ -1,4 +1,4 @@
-function loadContentFromFile(filename) {
+export default function loadContentFromFile(filename) {
     // The parameter "filename" is the name of a file. The file
     //  is expected to have its content formatted as JSON.
     // The function returns a JavaScript object.

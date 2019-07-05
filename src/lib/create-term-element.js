@@ -1,4 +1,9 @@
-function createTermElement(termContent, sources) {
+import createNewItemFormElement from "./create-new-item-form-element.js";
+import createTermSourceElement from "./create-term-source-element.js";
+import isURI from "./is-uri.js";
+import "../css/term.css";
+
+export default function createTermElement(termContent, sources) {
     // The parameter "termContent" is expected to be a native JavaScript object.
     // The function returns an HTML element.
 

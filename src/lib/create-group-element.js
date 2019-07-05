@@ -1,4 +1,8 @@
-function createGroupElement(groupContent, sources) {
+import createTermElement from "./create-term-element.js";
+import createNewItemFormElement from "./create-new-item-form-element.js";
+import "../css/group.css";
+
+export default function createGroupElement(groupContent, sources) {
     // The parameter "groupContent" is expected to be a native JavaScript object.
     // The function returns an HTML element.
 
