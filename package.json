@@ -1,19 +1,25 @@
 {
   "name": "silvuss-termbase",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0-alpha",
+  "description": "A knowledge base for various terms",
   "private": true,
   "scripts": {
     "dev": "webpack --mode=development",
     "prod": "webpack --mode=production",
     "dev-server": "webpack --mode=development && webpack-dev-server --open --mode=development"
   },
+  "keywords": [
+    "terms",
+    "knowledge",
+    "base",
+    "javascript"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/silvuss/silvuss-termbase.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "silvuss",
+  "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/silvuss/silvuss-termbase/issues"
   },
@@ -26,5 +32,8 @@
     "webpack": "^4.35.2",
     "webpack-cli": "^3.3.5",
     "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "lodash": ">=4.17.13"
   }
 }
