@@ -1,3 +1,7 @@
+**This project has been archived. No changes and updates are planned.**
+
+---
+
 # termbase
 
 This project contains a web application that facilitates displaying, creating and editing a knowledge base containing words, terms and similar. The words, terms etc. may be of any sort; e.g., it may be English words or some programming terms.
